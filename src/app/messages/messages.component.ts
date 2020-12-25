@@ -5,10 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css']
 })
-export class MessagesComponent implements OnInit {
-  public message: string;
+export class MessagesComponent {
+  public messages: string[] = [];
+  public value = '';
 
   public updateMessage() {
-    this.message = 'Mensaje actualizado';
+    this.messages = [...this.messages, this.value];
+    this.value = '';
   }
 }

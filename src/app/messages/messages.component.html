@@ -1,2 +1,6 @@
-<p>{{ message }}</p>
-<button (click)="updateMessage()">Send message</button>
+<p class="message" *ngFor="let message of messages">{{ message }}</p>
+
+<div class="message-bar">
+  <input [(ngModel)]="value">
+  <button (click)="updateMessage()">Send message</button>
+</div>
