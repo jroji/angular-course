@@ -1,2 +1,3 @@
 <!-- src/app/app.component.html -->
-<app-messages></app-messages>
+<app-messages [messages]="messages"></app-messages>
+<text-button (actionClick)="sendMessage($event)" buttonLabel="Send!"></text-button>

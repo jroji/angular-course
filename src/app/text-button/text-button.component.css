@@ -1,0 +1,22 @@
+:host {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  background: #891818;
+  width: 100%;
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+}
+
+button {
+  padding: 12px 24px;
+  background: rgb(97 81 81);
+  border: none;
+  color: white;
+}

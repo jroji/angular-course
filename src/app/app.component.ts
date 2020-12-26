@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Chat';
+  public messages: string[] = [];
+
+  public sendMessage(message: string) {
+    console.log(12);
+    this.messages = [...this.messages, message];
+  }
 }
