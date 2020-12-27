@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FormsModule } from '@angular/forms';
 import { TextButtonComponent } from './text-button/text-button.component';
+import { MimimiPipe } from './mimimi.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
-    TextButtonComponent
+    TextButtonComponent,
+    MimimiPipe
   ],
   imports: [
     BrowserModule,
