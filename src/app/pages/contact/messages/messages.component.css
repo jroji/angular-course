@@ -1,0 +1,13 @@
+:host {
+  --messages-button-color: var(--primary-color, cyan);
+  --messages-padding: var(--standard-padding, 12px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+}
+
+fictizia-message {
+  margin-bottom: 10px;
+}

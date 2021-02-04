@@ -1,0 +1,7 @@
+<fictizia-message
+  fictiziaHighlight
+  *ngFor="let message of messages; let i = index"
+  [ngClass]="{'even': i % 2 == 0}"
+  [msg]="message"
+>
+</fictizia-message>

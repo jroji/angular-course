@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  background-color:white;
+}
+
+
+input {
+  flex: 1;
+}

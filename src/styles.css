@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  --primary-color: #63e3bb;
+  --standard-padding: 12px;
+
+  font-size: 1rem;
+}
+* {
+  font-family: 'Hachi Maru Pop' !important;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('https://thumbs.dreamstime.com/b/chat-seamless-pattern-vector-minimal-texture-background-made-thin-line-bubbles-66029898.jpg');
+  background-size: cover;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

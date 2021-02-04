@@ -1,0 +1,11 @@
+:host {
+  border-radius: 12px;
+  background-color: aquamarine;
+  padding: 8px 16px;
+  display: flex;
+}
+
+:host(.even) {
+  align-self: flex-end;
+  background-color: #6ac3ff;
+}

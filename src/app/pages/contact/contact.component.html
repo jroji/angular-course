@@ -1,0 +1,8 @@
+<h1>Chat with {{name}}</h1>
+<fictizia-messages
+  [messages]="messages"
+></fictizia-messages>
+<fictizia-text-button
+  (messageSent)="addMessage($event)"
+  buttonLabel="Mandar mensaje!"
+></fictizia-text-button>

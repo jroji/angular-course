@@ -1,0 +1,12 @@
+fictizia-text-button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.stories {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 8px 16px;
+}
