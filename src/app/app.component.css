@@ -10,3 +10,15 @@ fictizia-text-button {
   background: white;
   padding: 8px 16px;
 }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: lightgray;
+  padding: 8px 16px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}

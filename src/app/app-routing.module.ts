@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
+import { HomeComponent } from './features/home/home.component';
 
 const routes: Routes = [{
   path: '',
@@ -9,7 +9,8 @@ const routes: Routes = [{
 },
 {
   path: 'contact/:user',
-  component: ContactComponent
+  loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule),
+  canActivate: [AuthGuard]
 },
 {
   path: '**',
@@ -18,7 +19,9 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

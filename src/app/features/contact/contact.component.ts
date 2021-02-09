@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { Result } from 'src/app/shared/services/users/user.model';
+import { UsersService } from 'src/app/shared/services/users/users.service';
 import { MessagesService } from '../../shared/services/messages/messages.service';
 
 @Component({
@@ -10,9 +12,13 @@ import { MessagesService } from '../../shared/services/messages/messages.service
 export class ContactComponent implements OnInit {
   public messages: string[] = [];
   public name: string;
+  public user: Result;
 
   constructor(private messagesService: MessagesService,
-              private activatedRoute: ActivatedRoute) {}
+              private userService: UsersService,
+              private activatedRoute: ActivatedRoute) {
+                this.user = this.userService.activeUser;
+  }
 
   public addMessage(message: string): void {
     this.messages.push(message);

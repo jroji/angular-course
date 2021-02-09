@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from './shared/services/users/user.model';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Result, User } from './shared/services/users/user.model';
 import { UsersService } from './shared/services/users/users.service';
 @Component({
   selector: 'fictizia-root',
@@ -7,11 +7,16 @@ import { UsersService } from './shared/services/users/users.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public users: User;
+  public users: Result[];
 
-  constructor(private usersService: UsersService) {}
+  constructor(
+    private usersService: UsersService,
+    private cd: ChangeDetectorRef,
+  ) {}
 
   public ngOnInit(): void {
-    this.usersService.getUsers().subscribe((users) => this.users = users );
+    this.usersService.getUsers().subscribe((users) => {
+      this.users = users;
+    });
   }
 }

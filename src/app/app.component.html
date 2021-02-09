@@ -1,11 +1,8 @@
+<nav>
+  <a routerLink="/">Home</a>
+</nav>
 <div class="stories">
-  <fictizia-user *ngFor="let user of users?.results" [user]="user"></fictizia-user>
+  <fictizia-user *ngFor="let user of users" [user]="user"></fictizia-user>
 </div>
+
 <router-outlet></router-outlet>
-<!-- <fictizia-messages
-  [messages]="messages"
-></fictizia-messages>
-<fictizia-text-button
-  (messageSent)="addMessage($event)"
-  buttonLabel="Mandar mensaje!"
-></fictizia-text-button> -->
