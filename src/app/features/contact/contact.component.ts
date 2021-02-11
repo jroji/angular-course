@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Result } from 'src/app/shared/services/users/user.model';
 import { UsersService } from 'src/app/shared/services/users/users.service';
 import { MessagesService } from '../../shared/services/messages/messages.service';

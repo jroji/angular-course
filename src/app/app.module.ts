@@ -11,12 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './shared/user/user.component';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './features/home/home.component';
+import { NewComponent } from './features/new/new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     HomeComponent,
+    NewComponent,
   ],
   imports: [
     FormsModule,

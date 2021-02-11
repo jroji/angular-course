@@ -1,0 +1,10 @@
+<form #userForm="ngForm">
+  <input #name="ngModel" name="name" required type="email" [(ngModel)]="user.name">
+  <input #email="ngModel" name="email" required [(ngModel)]="user.email">
+</form>
+
+<p *ngIf="name.invalid && name.touched">El nombre debe estar rellenado</p>
+<p *ngIf="email.invalid && email.touched">El email debe estar rellenado y contener arroba</p>
+
+<button (click)="submit()">Aceptar</button>
+<button (click)="userForm.reset()">Reset</button>
