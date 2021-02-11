@@ -1,10 +1,38 @@
-<form #userForm="ngForm">
-  <input #name="ngModel" name="name" required type="email" [(ngModel)]="user.name">
-  <input #email="ngModel" name="email" required [(ngModel)]="user.email">
+<form [formGroup]="userForm">
+  <label>
+    username:
+    <input type="text" formControlName="username">
+  </label>
+	<div formGroupName="name">
+	  <label>
+	    firstname:
+	    <input type="text" formControlName="firstname">
+	  </label>
+	  <label>
+	    lastname:
+	    <input type="text" formControlName="lastname">
+	  </label>
+  </div>
+	<div formGroupName="address">
+	  <label>
+	    city:
+	    <input type="text" formControlName="city">
+	  </label>
+	  <label>
+	    street:
+	    <input type="text" formControlName="street">
+	  </label>
+	  <label>
+	    extra:
+	    <input type="text" formControlName="extra">
+	  </label>
+	  <label>
+	    country:
+	    <input type="text" formControlName="country">
+	  </label>
+  </div>
 </form>
 
-<p *ngIf="name.invalid && name.touched">El nombre debe estar rellenado</p>
-<p *ngIf="email.invalid && email.touched">El email debe estar rellenado y contener arroba</p>
+<p>{{ userForm.get('username').invalid }}</p>
 
-<button (click)="submit()">Aceptar</button>
-<button (click)="userForm.reset()">Reset</button>
+<button (click)="update()"> Actualizar Información </button>

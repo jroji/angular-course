@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Result, User } from './shared/services/users/user.model';
 import { UsersService } from './shared/services/users/users.service';
 @Component({
@@ -11,6 +12,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private usersService: UsersService,
+    private activatedRoute: ActivatedRoute,
     private cd: ChangeDetectorRef,
   ) {}
 
@@ -18,5 +20,6 @@ export class AppComponent implements OnInit {
     this.usersService.getUsers().subscribe((users) => {
       this.users = users;
     });
+
   }
 }

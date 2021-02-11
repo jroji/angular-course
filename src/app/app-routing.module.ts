@@ -7,20 +7,24 @@ import { UserComponent } from './shared/user/user.component';
 
 const routes: Routes = [{
   path: '',
-  component: HomeComponent
+  component: HomeComponent,
+  data: { showTitle: true }
 },
 {
   path: 'new',
   component: NewComponent,
+  data: { showTitle: true }
 },
 {
   path: 'contact/:user',
   loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule),
   canActivate: [AuthGuard],
+  data: {}
 },
 {
   path: '**',
   redirectTo: '',
+  data: {},
   pathMatch: 'full'
 }];
 
