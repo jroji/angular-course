@@ -9,4 +9,7 @@ import { Result } from '../services/users/user.model';
 })
 export class UserComponent {
   @Input() user: Result;
+  @Input() rounded = true;
+
+  visible = false;
 }

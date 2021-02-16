@@ -9,7 +9,7 @@ export class MessagesService {
   constructor(private httpClient: HttpClient) { }
 
   public getMessages(): Observable<string[]> {
-    return this.httpClient.get(`${this.baseUrl}?type=all-meat&sentences=1&start-with-lorem=2`) as Observable<string[]>;
+    return this.httpClient.get(`${this.baseUrl}?type=all-meat&sentences=1&start-with-lorem=2`}) as Observable<string[]>;
   }
 
 }

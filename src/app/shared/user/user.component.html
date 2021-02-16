@@ -1,2 +1,4 @@
-<img class="user-image" src="{{ user.picture.large }}">
-<p class="user-name"> {{ user.name.first }} </p>
+<img class="user-image" (click)="visible = true"[ngClass]="{'rounded': rounded}" src="{{ user.picture.large }}">
+<div class="info" *ngIf="visible">
+  <ng-content></ng-content>
+</div>

@@ -12,6 +12,9 @@ import { UserComponent } from './shared/user/user.component';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './features/home/home.component';
 import { NewComponent } from './features/new/new.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { NewComponent } from './features/new/new.component';
     BrowserModule,
     MatIconModule,
     MatInputModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     AppRoutingModule,
     MatButtonModule,
     BrowserAnimationsModule

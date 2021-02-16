@@ -3,7 +3,13 @@
   <a routerLink="/contact/pepe">Home</a>
 </nav>
 <div class="stories">
-  <fictizia-user *ngFor="let user of users" [user]="user"></fictizia-user>
+  <fictizia-user *ngFor="let user of users" [user]="user">
+    <h1>{{ user.name.first }}</h1>
+    <p> {{ user.email }} </p>
+  </fictizia-user>
+  <fictizia-user *ngFor="let user of users" [user]="user">
+    <img src="{{ user.picture.thumbnail }}">
+  </fictizia-user>
 </div>
 
 <router-outlet></router-outlet>

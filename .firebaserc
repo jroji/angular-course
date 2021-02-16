@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chat-2c012": {
+      "hosting": {
+        "chatdemo": [
+          "chat-2c012"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "chat": "chat-2c012"
+  }
+}
